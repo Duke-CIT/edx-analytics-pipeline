@@ -146,9 +146,10 @@ class ReconcileOrdersAndTransactionsTask(ReconcileOrdersAndTransactionsDownstrea
             OrderTableTask(
                 import_date=self.import_date
             ),
-            PaymentTask(
-                import_date=self.import_date
-            ),
+            # Temporarily disable this task for testing purposes:
+            # PaymentTask(
+            #     import_date=self.import_date
+            # ),
             InvoiceTask(
                 import_date=self.import_date
             )
